@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package pbpipes.proto;
+
+message HBaseRegionInfo {
+  bytes start_key = 1;
+  bytes end_key = 2;
+  int64 id = 3;
+  bytes name = 4;
+  int32 version = 5;
+  bytes server_name = 6;
+  int32 port = 7;
+}
+
+message TaskInfo {
+  int32 index = 1;
+  int32 total = 2;
+
+  HBaseRegionInfo region = 3;
+}
+
+message TaskResult {
+  bool ok = 1;
+}
+
+message ExecutorSpec {
+  string host = 1;
+  int32 num_executors = 2;
+}
+
+// config for the driver program.
+message DriverConfig {
+  repeated ExecutorSpec executors = 1;
+}
+
+service Executor {
+  rpc PostTask(TaskInfo) returns (TaskResult);
+}
+
