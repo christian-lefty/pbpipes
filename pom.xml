@@ -6,7 +6,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.lefty</groupId>
   <artifactId>pbpipes</artifactId>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
   <version>0.1-alpha</version>
   <name>pbpipes</name>
   <properties>
