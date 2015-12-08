@@ -1,0 +1,30 @@
+[
+  {
+    "mode" : "NULLABLE",
+    "name" : "id",
+    "type" : "STRING"
+  },
+  {
+    "mode" : "NULLABLE",
+    "name" : "intField",
+    "type" : "INTEGER"
+  },
+  {
+    "mode" : "NULLABLE",
+    "name" : "aTimestamp",
+    "type" : "TIMESTAMP"
+  },
+  {
+    "fields" : 
+    [
+      {
+        "mode" : "NULLABLE",
+        "name" : "id",
+        "type" : "STRING"
+      }
+    ],
+    "mode" : "NULLABLE",
+    "name" : "aNestedMessage",
+    "type" : "RECORD"
+  }
+]
