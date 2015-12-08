@@ -87,7 +87,7 @@ public class TimeUtil {
    * @throws IllegalArgumentException if the given timestamp is not in the
    *         valid range.
    */
-  public static String toString(Timestamp timestamp)
+  public static synchronized String toString(Timestamp timestamp)
       throws IllegalArgumentException {
     StringBuilder result = new StringBuilder();
     // Format the seconds part.
