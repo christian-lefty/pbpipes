@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+package pbpipes.proto;
+
+import "google/protobuf/descriptor.proto";
+
+extend google.protobuf.MessageOptions {
+  optional string bigquery_table = 1035;
+}
+
